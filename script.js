@@ -3,7 +3,11 @@ function updatetable() {
   //get value of inputField
   var InputData = InputField.value;
 
-  if (typeof InputData !== "undefined" && InputData!=="" && InputData!=="") {
+  if (
+    typeof InputData !== "undefined" &&
+    InputData !== "" &&
+    InputData !== ""
+  ) {
     //get table
     var table = document
       .getElementById("newtable")
@@ -46,15 +50,13 @@ function updatetable() {
     editBtn.className =
       "bg-red-800 rounded-2xl text-white pt-2 pb-2 pr-4 pl-4 ml-2 cursor-pointer mt-2 mb-2";
 
-
-
-      //create new button for toggle
+    //create new button for toggle
     var togglebtn = document.createElement("button");
     togglebtn.textContent = "Toggle";
     togglebtn.onclick = function () {
-     if(textcell !== "" && textcell !== " "){
-      textcell.classList.add("line-through" , "text-gray-400")
-     }
+      if (textcell !== "" && textcell !== " ") {
+        textcell.classList.add("line-through", "text-gray-400");
+      }
     };
     togglebtn.className =
       "bg-red-800 rounded-2xl text-white pt-2 pb-2 pr-4 pl-4 ml-2 cursor-pointer mt-2 mb-2";
