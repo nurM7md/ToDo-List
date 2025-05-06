@@ -278,6 +278,9 @@
   .bg-\[url\(\'\.\/back\.jpg\'\)\] {
     background-image: url('./back.jpg');
   }
+  .bg-\[url\(\'\.\/images\/back\.jpg\'\)\] {
+    background-image: url('./images/back.jpg');
+  }
   .bg-\[url\(\'\/ToDo-List\/images\/back\.jpg\'\)\] {
     background-image: url('/ToDo-List/images/back.jpg');
   }
