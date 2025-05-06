@@ -3,7 +3,7 @@ function updatetable() {
   //get value of inputField
   var InputData = InputField.value;
 
-  if (typeof InputData !== "undefined") {
+  if (typeof InputData !== "undefined" && InputData!=="" && InputData!=="") {
     //get table
     var table = document
       .getElementById("newtable")
