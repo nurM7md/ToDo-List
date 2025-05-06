@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To Do List</title>
+        <link href="./src/output.css" rel="stylesheet">
+    </head>
+    <body class="bg-[url('/back.jpg')] bg-cover bg-center w-full h-64">
+        <section class="container m-auto text-center">
+            <h1 class="text-red-800 pt-20 text-5xl font-bold">ToDo List</h1>
+
+            <input id="taskInput" type="text" placeholder="Enter New Task..."
+                class="mt-32 border-2 border-red-800 rounded-2xl p-3 placeholder-gray-400 text-gray-400 focus:outline-none ">
+
+            <button onclick="updatetable()"
+                class=" pt-3 pb-3 pr-5 pl-5 bg-red-800 text-gray-400 rounded-3xl cursor-pointer">Add
+                Task</button>
+
+            <table id="newtable"
+                class="table-fixed border-2 border-red-800 m-auto mt-12 w-[200px] md:w-[700px] divide-x divide-y divide-red-800">
+                <thead>
+                    <tr>
+                        <th class="text-gray-400 text-lg font-semibold ">
+                            Task
+                        </th>
+                        <th class="text-gray-400 text-lg font-semibold ">
+                            actions
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </section>
+
+        <script src="/script.js"></script>
+    </body>
+</html>
