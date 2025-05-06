@@ -224,8 +224,14 @@
   .table-fixed {
     table-layout: fixed;
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
   .cursor-pointer {
     cursor: pointer;
+  }
+  .resize {
+    resize: both;
   }
   .divide-x {
     :where(& > :not(:last-child)) {
@@ -268,6 +274,12 @@
   }
   .bg-red-800 {
     background-color: var(--color-red-800);
+  }
+  .bg-\[url\(\'\.\/back\.jpg\'\)\] {
+    background-image: url('./back.jpg');
+  }
+  .bg-\[url\(\'\/ToDo-List\/images\/back\.jpg\'\)\] {
+    background-image: url('/ToDo-List/images/back.jpg');
   }
   .bg-\[url\(\'\/back\.jpg\'\)\] {
     background-image: url('/back.jpg');
@@ -342,10 +354,17 @@
   .line-through {
     text-decoration-line: line-through;
   }
+  .underline {
+    text-decoration-line: underline;
+  }
   .placeholder-gray-400 {
     &::placeholder {
       color: var(--color-gray-400);
     }
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .focus\:outline-none {
     &:focus {
@@ -378,6 +397,11 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -385,6 +409,7 @@
       --tw-border-style: solid;
       --tw-divide-y-reverse: 0;
       --tw-font-weight: initial;
+      --tw-outline-style: solid;
     }
   }
 }
